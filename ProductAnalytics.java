@@ -44,7 +44,7 @@ public class ProductAnalytics {
      */
     public boolean hasProductOutOfStock() {
         return productCatalog.stream()
-        .filter(p->p.stock()>=0)
+        .filter(p->p.stock()==0)
         .count()>0;
         /* 
         return productCatalog.stream()
